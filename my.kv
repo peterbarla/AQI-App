@@ -1,0 +1,36 @@
+
+<Screen>:
+    result_city:result_city
+    result_aqi:result_aqi
+    entry:entry
+    FloatLayout:
+        size: root.width, root.height
+        Label:
+            text: "Global AQI calculator"
+            font_size: 50
+            pos_hint: {"y":0.4}
+        Label:
+            text: "Enter a city name: "
+            font_size: 35
+            pos_hint: {"x":-0.15, "y":0.25}
+        TextInput:
+            id:entry
+            size_hint: 0.25,0.09
+            font_size: 30
+            pos_hint: {"x":0.55, "y":0.7100}
+        Button:
+            size_hint: 0.25, 0.1
+            text: "Get AQI"
+            background_color: 1,1,1,1
+            color: 0,0,0,1
+            pos_hint: {"x":0.39, "y":0.55}
+            on_press: root.pressed()
+        Label:
+            id:result_city
+            font_size: 40
+            pos_hint: {"y": -0.1}
+        Label
+            id:result_aqi
+            font_size: 40
+            pos_hint: {"y": -0.3}
+
